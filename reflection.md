@@ -2,10 +2,20 @@
 
 ## 1. System Design
 
+- The system shall be able to add a pet, schedule a walk, and schedule a grooming.
+
 **a. Initial design**
 
 - Briefly describe your initial UML design.
+    The UML has 4 classes, Owner, Pet, Scheduler, and Task. The Owner can add and remove 
+    pets as well as display a list of all of their pets. A schedule can be created that
+    has an owner. The Pet class creates pets with a name, owner, and type. The scheduler can add and remove tasks, generate a schedule and display. Task can also be created with time stamps, durations, and task types. 
+    the schedule. 
 - What classes did you include, and what responsibilities did you assign to each?
+    - Owner: add_pet(), remove_pet(), get_pets()
+    - Pet: __str__()
+    - Scheduler: add_task(), remove_task(), generate_schedule(), explain_plan()
+    - Task: __str__()
 
 **b. Design changes**
 
