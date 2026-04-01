@@ -22,6 +22,15 @@ Your final app should:
 - Display the plan clearly (and ideally explain the reasoning)
 - Include tests for the most important scheduling behaviors
 
+## Smarter Scheduling
+
+The `Scheduler` class includes several features beyond basic task management:
+
+- **Sorting** — `sort_by_time()` orders tasks chronologically by `start_time` using a lambda key on zero-padded `"HH:MM"` strings.
+- **Filtering** — `filter_tasks(completed, pet_name)` returns a subset of tasks by completion status, pet name, or both. All parameters are optional.
+- **Recurring tasks** — `complete_task(task)` marks a task done and automatically schedules the next occurrence for `daily` (+1 day) and `weekly` (+7 days) tasks using Python's `timedelta`. One-time tasks return `None`.
+- **Conflict detection** — `add_task()` warns whenever a new task's time window overlaps with an existing one on the same date. Overlap is detected with the interval check `a_start < b_end and b_start < a_end`, so partial overlaps are caught too. The program continues normally after printing the warning. `get_conflicts()` can also audit the full schedule for all conflicting pairs at once.
+
 ## Getting started
 
 ### Setup

@@ -5,11 +5,8 @@
 - The system shall be able to add a pet, schedule a walk, and schedule a grooming.
 
 **a. Initial design**
-
 - Briefly describe your initial UML design.
-    The UML has 4 classes, Owner, Pet, Scheduler, and Task. The Owner can add and remove 
-    pets as well as display a list of all of their pets. A schedule can be created that
-    has an owner. The Pet class creates pets with a name, owner, and type. The scheduler can add and remove tasks, generate a schedule and display. Task can also be created with time stamps, durations, and task types. 
+    - The UML has 4 classes, Owner, Pet, Scheduler, and Task. The Owner can add and remove pets as well as display a list of all of their pets. A schedule can be created that has an owner. The Pet class creates pets with a name, owner, and type. The scheduler can add and remove tasks, generate a schedule and display. Task can also be created with time stamps, durations, and task types. 
     the schedule. 
 - What classes did you include, and what responsibilities did you assign to each?
     - Owner: add_pet(), remove_pet(), get_pets()
@@ -31,12 +28,16 @@
 **a. Constraints and priorities**
 
 - What constraints does your scheduler consider (for example: time, priority, preferences)?
+    - The scheduler considers the users need to filter and to find conflicts.
 - How did you decide which constraints mattered most?
+    - The app is ultimately a scheduler, so ensuring that you have a schedule with no conflicting blocks takes the highest priority. 
 
 **b. Tradeoffs**
 
 - Describe one tradeoff your scheduler makes.
+    - Claude suggested that I only show one warning for a schedule conflict as opposed to continuualy showing the same warning when a conflict arises again. I declined this implementation because I think users should be stopped at every instance where a conflict could arise, regardless of whether or not it has been shown before. 
 - Why is that tradeoff reasonable for this scenario?
+    - I feel like average users need to be warned before commiting to something. Plus, it would have made the code more Pythonic and less human readable. 
 
 ---
 
