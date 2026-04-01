@@ -1,26 +1,28 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
+from typing import Optional
 
 
 @dataclass
 class Owner:
     name: str
-    pets: list = field(default_factory=list)
+    pets: list[Pet] = field(default_factory=list)
 
-    def add_pet(self, pet) -> None:
+    def add_pet(self, pet: Pet) -> None:
         pass
 
-    def remove_pet(self, pet) -> None:
+    def remove_pet(self, pet: Pet) -> None:
         pass
 
-    def get_pets(self) -> list:
+    def get_pets(self) -> list[Pet]:
         pass
 
 
 @dataclass
 class Pet:
     name: str
-    type: str
-    owner: Owner = None
+    pet_type: str
+    owner: Optional[Owner] = None  # None-safe: always check before accessing owner attributes
 
     def __str__(self) -> str:
         pass
@@ -32,7 +34,7 @@ class Task:
     task_type: str
     duration_minutes: int
     start_time: str
-    pet: Pet = None
+    pet: Optional[Pet] = None
 
     def __str__(self) -> str:
         pass
@@ -41,17 +43,17 @@ class Task:
 @dataclass
 class Scheduler:
     owner: Owner
-    tasks: list = field(default_factory=list)
+    tasks: list[Task] = field(default_factory=list)
 
     def add_task(self, task: Task) -> None:
+        # Validate that task.pet belongs to self.owner before adding
         pass
 
     def remove_task(self, task: Task) -> None:
         pass
 
-    def generate_schedule(self) -> list:
+    def generate_schedule(self) -> list[Task]:
         pass
 
-    def explain_plan(self, schedule: list) -> str:
+    def explain_plan(self, schedule: list[Task]) -> str:
         pass
-    
