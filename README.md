@@ -135,6 +135,16 @@ The core scheduling logic — sorting, filtering, recurring tasks, and conflict 
 pawpal_system.py   # Owner, Pet, Task, Scheduler classes
 app.py             # Streamlit UI
 main.py            # Command-line demo
+requirements.txt   # Python dependencies
+reflection.md      # Project reflection and design notes
+README.md          # This file
+assets/
+  demo1.png        # App screenshot — Owner & Pet Setup
+  demo2.png        # App screenshot — Owner Information & Add a Task
+  demo3.png        # App screenshot — Build Schedule
+  demo4.png        # App screenshot — View Schedule
+uml_original.png   # Initial UML class diagram
+uml_final.png      # Final UML class diagram (updated to match implementation)
 test/
   test_pawpal.py   # Full automated test suite
 ```
