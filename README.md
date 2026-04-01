@@ -41,6 +41,37 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+## Testing PawPal+
+
+Run the full test suite with:
+
+```bash
+python -m pytest
+```
+
+### What the tests cover
+
+| Area | Tests |
+|---|---|
+| **Task status** | Marking a task complete flips its `completed` flag |
+| **Sorting** | `sort_by_time()` orders tasks chronologically, handles empty schedules, and is stable for equal start times |
+| **Recurring tasks** | Daily tasks roll forward +1 day; weekly tasks roll forward +7 days; one-time tasks return `None`; boundary dates (month/year crossings) work correctly; all task fields are preserved on recurrence |
+| **Conflict detection** | Overlapping windows on the same date are caught; adjacent (non-overlapping) windows are not flagged; tasks on different dates with the same time don't conflict; empty and single-task schedules return no conflicts |
+| **Filtering** | Filter by completion status, pet name, or no arguments (returns all); filtering never mutates the scheduler's task list; tasks without a pet are excluded when filtering by pet name |
+| **Ownership validation** | Adding a task for a pet not owned by the scheduler's owner raises `ValueError`; tasks with no pet don't raise |
+| **Remove task** | `remove_task()` removes the task from both the scheduler list and the pet's task list |
+| **Schedule generation** | `generate_schedule()` places pending tasks before completed ones regardless of start time |
+
+**25 / 25 tests passing.**
+
+### Confidence Level
+
+★★★★☆ (4/5)
+
+The core scheduling logic — sorting, filtering, recurring tasks, and conflict detection — is thoroughly tested across normal cases, edge cases, and boundary conditions. The one-star gap reflects areas not yet covered by automated tests: the Streamlit UI layer, `generate_plan()` AI output, and multi-owner or multi-pet scenarios at scale.
+
+---
+
 ### Suggested workflow
 
 1. Read the scenario carefully and identify requirements and edge cases.
