@@ -22,7 +22,7 @@
 - Did your design change during implementation?
     - Yes, some slight changes were made including forcing specific types in lists and adding extra method stubs.
 - If yes, describe at least one change and why you made it.
-    - The attribute "type" in the pet class was changed to pet_type to avoid any confusion and ambiguity with they Python reserved word "type"
+    - The attribute "type" in the pet class was changed to pet_type to avoid any confusion and ambiguity with they Python reserved word "type".
 
 ---
 
