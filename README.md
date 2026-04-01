@@ -58,19 +58,19 @@ Each task row in the schedule view includes a **Mark complete** button. Clicking
 
 **Owner & Pet Setup** — Enter an owner name, pet name, and species. Additional pets can be added dynamically.
 
-<a href="/course_images/ai110/demo1.png" target="_blank"><img src='/course_images/ai110/demo1.png' title='PawPal App' width='' alt='PawPal App' class='center-block' /></a>
+<a href="assets/demo1.png" target="_blank"><img src='assets/demo1.png' title='PawPal App' width='' alt='PawPal App' class='center-block' /></a>
 
 **Owner Information & Add a Task** — Registered owner and pets are displayed live. Use "Add a Task" to define custom task types that appear in the Schedule Builder.
 
-<a href="/course_images/ai110/demo2.png" target="_blank"><img src='/course_images/ai110/demo2.png' title='PawPal App' width='' alt='PawPal App' class='center-block' /></a>
+<a href="assets/demo2.png" target="_blank"><img src='assets/demo2.png' title='PawPal App' width='' alt='PawPal App' class='center-block' /></a>
 
 **Build Schedule** — Expandable panels let you configure start time and duration for each task type (Walk, Grooming, or any custom task) before scheduling it.
 
-<a href="/course_images/ai110/demo3.png" target="_blank"><img src='/course_images/ai110/demo3.png' title='PawPal App' width='' alt='PawPal App' class='center-block' /></a>
+<a href="assets/demo3.png" target="_blank"><img src='assets/demo3.png' title='PawPal App' width='' alt='PawPal App' class='center-block' /></a>
 
 **View Schedule** — Filter by pet and sort by time. Conflict detection runs automatically. Each task row shows status, duration, and frequency, with a "Mark complete" button for pending tasks. Summary metrics and a plain-text plan explanation are shown below.
 
-<a href="/course_images/ai110/demo4.png" target="_blank"><img src='/course_images/ai110/demo4.png' title='PawPal App' width='' alt='PawPal App' class='center-block' /></a>
+<a href="assets/demo4.png" target="_blank"><img src='assets/demo4.png' title='PawPal App' width='' alt='PawPal App' class='center-block' /></a>
 
 ---
 
