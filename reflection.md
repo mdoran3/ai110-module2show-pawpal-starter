@@ -46,12 +46,16 @@
 **a. How you used AI**
 
 - How did you use AI tools during this project (for example: design brainstorming, debugging, refactoring)?
+    - AI was used in the project during every step. Initially it helped with brainstorming and generating an initial UML class diagram. From there, skeletons and methods were implemented. Once the MVP was in place, core logic was deepened, revised, and tightened using Claude. Clean up, docstrings, and UI cleanups were also used at various phases using AI prompts and human verification. 
 - What kinds of prompts or questions were most helpful?
+    - Starting with more generic prompts and allowing th agent to create the best outcome works well in the beginning. As the product becomes more finalized, specific prompts that point to very specifc issues or adjustments becomes more important. 
 
 **b. Judgment and verification**
 
 - Describe one moment where you did not accept an AI suggestion as-is.
+    - The agent suggested to clean up the scheduling warnings if a conflict in the schedule was found. I opted against this choice since I believe that humans of all skill levels in the context of technology need to be saved from themselves and explicitly reminded of potential issues of conflicts. 
 - How did you evaluate or verify what the AI suggested?
+    - Running pytests was helpful but more importantly, running and refreshing a local copy of the app in the browser and manually testing various scenarios will always be the best way to triple check what is really happening from a user perspective. 
 
 ---
 
@@ -60,12 +64,16 @@
 **a. What you tested**
 
 - What behaviors did you test?
+    - I tested getter and setter logic, algorithmic sorting, verification of task completness and many other scenarios.
 - Why were these tests important?
+    - The test help varify scenarios that may be unforseeable at smaller scales or when only a few test cases are manually checked by a human coder. 
 
 **b. Confidence**
 
 - How confident are you that your scheduler works correctly?
+    - The AI agent gave me a 4 out of 5 at some point, I would tend to agree that it sits around this score. Its core functions seem to be there but further iterations could really help the human-computer interaction shine. 
 - What edge cases would you test next if you had more time?
+    - I would like to have looked into an edge case where the same pet was added twice and have the pet adder prooperly handle the scenario. 
 
 ---
 
@@ -74,11 +82,14 @@
 **a. What went well**
 
 - What part of this project are you most satisfied with?
+    - Running the app in the UI and then fiddling in Claude to get it just right. Also, creating UML diagrams from the agent and then going over to Mermaid.live to view the results was powerful. 
 
 **b. What you would improve**
 
 - If you had another iteration, what would you improve or redesign?
+    - I don't like that the inital Owner field requires a pet right from the beginning. I feel like each pet should be added explicitly with "add pet". I also would like a way to remove pets or tasks in order to maintain a more customizable experience for the user that would also proivde less friciton. 
 
 **c. Key takeaway**
 
 - What is one important thing you learned about designing systems or working with AI on this project?
+    - I will absolutey be using Mermaid.live in the future as well as being more aware of a strong planning phase and diagram creation phase before getting started. 
